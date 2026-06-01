@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AXON Studio - nowoczesne strony internetowe, SEO i wsparcie dla lokalnych biznesow.">
+  <title>AXON Studio - Strony internetowe dla biznesu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            electric: "#2563eb",
+            slatebrand: "#0f172a",
+            surface: "#f8fafc"
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"]
+          },
+          boxShadow: {
+            soft: "0 12px 40px -20px rgba(15,23,42,0.28)"
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
+  <style>
+    [x-cloak] { display: none !important; }
+    input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-visible {
+      outline: 2px solid #2563eb;
+      outline-offset: 2px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-700 font-sans antialiased" x-data="axonWizard()">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/85 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-16 sm:h-20 flex items-center justify-between gap-4">
+        <a href="#" class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 120" width="100%" class="h-10 sm:h-11 w-auto">
+            <g fill="none" stroke="#0f172a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M25,85 L50,35 L75,85 M35,65 L65,65" stroke="#2563eb" stroke-width="4"/>
+              <path d="M85,35 L125,85 M125,35 L85,85" stroke="#0f172a" stroke-width="4"/>
+              <circle cx="50" cy="35" r="4" fill="#2563eb" stroke="none"/>
+              <circle cx="105" cy="60" r="4" fill="#0f172a" stroke="none"/>
+            </g>
+            <text x="155" y="68" font-family="sans-serif" font-size="34" font-weight="800" fill="#0f172a" letter-spacing="4">AXON</text>
+            <text x="157" y="88" font-family="sans-serif" font-size="12" font-weight="500" fill="#2563eb" letter-spacing="6">STUDIO</text>
+          </svg>
+        </a>
+        <div class="hidden md:flex items-center gap-6 text-sm">
+          <a href="tel:+48669223132" class="inline-flex items-center gap-2 text-slate-600 hover:text-electric transition-colors">
+            <i data-lucide="phone" class="w-4 h-4"></i>669 223 132
+          </a>
+          <a href="axonstudio.kontakt@gmail.com" class="inline-flex items-center gap-2 text-slate-600 hover:text-electric transition-colors">
+            <i data-lucide="mail" class="w-4 h-4"></i>axonstudio.kontakt@gmail.com
+          </a>
+        </div>
+        <a href="#brief" class="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-semibold text-white bg-electric hover:bg-blue-700 rounded-lg transition-colors shadow-sm">
+          Zaprojektuj swoja strone
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-16 sm:pt-20">
+    <section class="bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28">
+        <div class="max-w-4xl">
+          <p class="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold tracking-wide uppercase bg-blue-50 text-electric mb-6">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>Premium web design dla lokalnego biznesu
+          </p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-slatebrand mb-6">
+            Nowoczesna strona internetowa dla Twojego biznesu. Juz od 299 zl.
+          </h1>
+          <p class="text-lg sm:text-xl leading-relaxed text-slate-600 max-w-3xl mb-10">
+            Zapomnij o powtarzalnych, sztucznych szablonach i miesiacach oczekiwania. W AXON Studio tworzymy szybkie, responsywne i unikalne strony dopasowane do lokalnego biznesu. Gotowy projekt oddajemy w zaledwie 2 dni robocze.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#brief" class="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-electric hover:bg-blue-700 rounded-xl transition-colors shadow-soft">
+              Skonfiguruj darmowa wycene
+              <i data-lucide="arrow-down" class="w-5 h-5"></i>
+            </a>
+            <a href="#korzysci" class="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-slatebrand bg-surface border border-slate-200 hover:bg-slate-100 rounded-xl transition-colors">
+              Zobacz korzysci
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="brief" class="bg-surface py-16 sm:py-20 lg:py-24">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl sm:text-4xl font-bold text-slatebrand tracking-tight mb-3">Brief projektowy AXON Studio</h2>
+          <p class="text-lg text-slate-600">Wypelnij kroki ponizej. Otrzymasz darmowa koncepcje i plan dzialania.</p>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-2xl shadow-soft overflow-hidden">
+          <div class="px-5 sm:px-8 pt-6 pb-4 border-b border-slate-100">
+            <div class="flex items-center justify-between text-xs font-semibold text-slate-500 mb-2">
+              <span>Krok <span x-text="step"></span> z 4</span>
+              <span x-text="steps[step - 1]"></span>
+            </div>
+            <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden">
+              <div class="h-full bg-electric transition-all duration-500 ease-out" :style="'width:' + (step / 4) * 100 + '%'"></div>
+            </div>
+          </div>
+
+          <form
+            x-ref="form"
+            name="brief-axon"
+            method="POST"
+            action="https://formspree.io/f/xdajyarv"
+            @submit.prevent="submitForm"
+            class="px-5 sm:px-8 py-6 sm:py-8"
+          >
+            <input type="hidden" name="_subject" value="Nowe zgloszenie - Brief AXON Studio">
+            <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div x-show="step===1" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0">
+              <h3 class="text-xl font-bold text-slatebrand mb-6">Profil Twojej Firmy</h3>
+              <div class="grid gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-slatebrand mb-1.5">Nazwa firmy *</label>
+                  <input name="nazwa_firmy" x-model="form.nazwaFirmy" type="text" class="w-full rounded-xl border border-slate-200 px-4 py-3" :class="errors.nazwaFirmy ? 'border-red-400':''" placeholder="np. AXON Studio">
+                  <p x-show="errors.nazwaFirmy" class="text-xs text-red-500 mt-1" x-text="errors.nazwaFirmy"></p>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slatebrand mb-1.5">Branza / Specjalizacja *</label>
+                  <input name="branza" x-model="form.branza" type="text" class="w-full rounded-xl border border-slate-200 px-4 py-3" :class="errors.branza ? 'border-red-400':''" placeholder="np. kosmetologia, serwis, kancelaria">
+                  <p x-show="errors.branza" class="text-xs text-red-500 mt-1" x-text="errors.branza"></p>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slatebrand mb-1.5">Obecna strona lub profil FB</label>
+                  <input name="obecna_strona" x-model="form.obecnaStrona" type="text" class="w-full rounded-xl border border-slate-200 px-4 py-3" placeholder="opcjonalnie">
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slatebrand mb-1.5">Glowny cel nowej strony *</label>
+                  <select name="cel_strony" x-model="form.cel" class="w-full rounded-xl border border-slate-200 px-4 py-3 bg-white" :class="errors.cel ? 'border-red-400':''">
+                    <option value="">Wybierz cel...</option>
+                    <option>Chce pozyskiwac nowych klientow</option>
+                    <option>Chce estetycznie zaprezentowac oferte i cennik</option>
+                    <option>Chce zautomatyzowac zapisy (Kalendarz online)</option>
+                    <option>Inny cel</option>
+                  </select>
+                  <p x-show="errors.cel" class="text-xs text-red-500 mt-1" x-text="errors.cel"></p>
+                </div>
+              </div>
+            </div>
+
+            <div x-show="step===2" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0">
+              <h3 class="text-xl font-bold text-slatebrand mb-6">Wizja, Styl i Estetyka</h3>
+              <p class="text-xs uppercase tracking-wide text-slate-500 font-semibold mb-3">Wybierz styl</p>
+              <div class="grid sm:grid-cols-3 gap-3 mb-6">
+                <template x-for="style in styles" :key="style.id">
+                  <label class="cursor-pointer block">
+                    <input type="radio" name="styl" class="sr-only" :value="style.name" x-model="form.styl">
+                    <div class="rounded-xl border-2 p-4 h-full transition-all" :class="form.styl===style.name ? 'border-electric bg-blue-50/60':'border-slate-200 hover:border-slate-300'">
+                      <i :data-lucide="style.icon" class="w-6 h-6 text-electric mb-3"></i>
+                      <p class="text-sm font-semibold text-slatebrand" x-text="style.name"></p>
+                      <p class="text-xs text-slate-500 mt-1" x-text="style.desc"></p>
+                    </div>
+                  </label>
+                </template>
+              </div>
+              <p x-show="errors.styl" class="text-xs text-red-500 mb-4" x-text="errors.styl"></p>
+
+              <p class="text-xs uppercase tracking-wide text-slate-500 font-semibold mb-3">Kolor akcentu</p>
+              <div class="flex flex-wrap gap-4 mb-2">
+                <template x-for="color in colors" :key="color.id">
+                  <label class="cursor-pointer">
+                    <input type="radio" name="kolor_akcentu" class="sr-only" :value="color.name" x-model="form.kolor">
+                    <span class="w-11 h-11 rounded-full border-2 block transition-all" :style="'background:'+color.hex" :class="form.kolor===color.name ? 'border-electric ring-2 ring-electric/30 scale-110':'border-slate-200'"></span>
+                  </label>
+                </template>
+              </div>
+              <p x-show="errors.kolor" class="text-xs text-red-500 mb-6" x-text="errors.kolor"></p>
+            </div>
+
+            <div x-show="step===3" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0">
+              <h3 class="text-xl font-bold text-slatebrand mb-6">Wybor Uslug i Dodatkow</h3>
+              <div class="space-y-2">
+                <template x-for="addon in addons" :key="addon.id">
+                  <label class="flex gap-3 items-start p-3.5 border rounded-xl cursor-pointer transition-colors" :class="form.dodatki.includes(addon.label) ? 'border-electric bg-blue-50/40':'border-slate-200 hover:border-slate-300'">
+                    <input type="checkbox" name="uslugi[]" :value="addon.label" @change="toggleAddon(addon.label)" :checked="form.dodatki.includes(addon.label)" class="mt-0.5 w-4 h-4 text-electric border-slate-300 rounded">
+                    <span class="text-sm font-medium text-slatebrand" x-text="addon.label"></span>
+                  </label>
+                </template>
+              </div>
+              <input type="hidden" name="wybrane_uslugi" :value="form.dodatki.join(', ')">
+            </div>
+
+            <div x-show="step===4" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0">
+              <h3 class="text-xl font-bold text-slatebrand mb-6">Dane Kontaktowe</h3>
+              <div class="grid gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-slatebrand mb-1.5">Numer telefonu *</label>
+                  <input name="telefon" x-model="form.telefon" type="tel" class="w-full rounded-xl border border-slate-200 px-4 py-3" :class="errors.telefon ? 'border-red-400':''" placeholder="669 223 132">
+                  <p x-show="errors.telefon" class="text-xs text-red-500 mt-1" x-text="errors.telefon"></p>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slatebrand mb-1.5">Adres E-mail *</label>
+                  <input name="email" x-model="form.email" type="email" class="w-full rounded-xl border border-slate-200 px-4 py-3" :class="errors.email ? 'border-red-400':''" placeholder="kontakt@firma.pl">
+                  <p x-show="errors.email" class="text-xs text-red-500 mt-1" x-text="errors.email"></p>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slatebrand mb-1.5">Imie *</label>
+                  <input name="imie" x-model="form.imie" type="text" class="w-full rounded-xl border border-slate-200 px-4 py-3" :class="errors.imie ? 'border-red-400':''" placeholder="np. Jan">
+                  <p x-show="errors.imie" class="text-xs text-red-500 mt-1" x-text="errors.imie"></p>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-slatebrand mb-2">Preferowany kontakt *</p>
+                  <div class="grid sm:grid-cols-2 gap-3">
+                    <label class="border-2 rounded-xl p-3.5 cursor-pointer transition-colors" :class="form.preferowanyKontakt === 'Zadzwon do mnie' ? 'border-electric bg-blue-50/50':'border-slate-200'">
+                      <input type="radio" name="preferowany_kontakt" class="sr-only" value="Zadzwon do mnie" x-model="form.preferowanyKontakt">
+                      <span class="text-sm font-medium text-slatebrand">Zadzwon do mnie</span>
+                    </label>
+                    <label class="border-2 rounded-xl p-3.5 cursor-pointer transition-colors" :class="form.preferowanyKontakt === 'Napisz wiadomosc e-mail' ? 'border-electric bg-blue-50/50':'border-slate-200'">
+                      <input type="radio" name="preferowany_kontakt" class="sr-only" value="Napisz wiadomosc e-mail" x-model="form.preferowanyKontakt">
+                      <span class="text-sm font-medium text-slatebrand">Napisz wiadomosc e-mail</span>
+                    </label>
+                  </div>
+                  <p x-show="errors.preferowanyKontakt" class="text-xs text-red-500 mt-1" x-text="errors.preferowanyKontakt"></p>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slatebrand mb-1.5">Dodatkowe uwagi, wymagania lub linki do stron, ktore Ci sie podobaja</label>
+                  <textarea name="uwagi" x-model="form.uwagi" rows="4" class="w-full rounded-xl border border-slate-200 px-4 py-3 resize-none" placeholder="Opcjonalnie"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between mt-8 pt-6 border-t border-slate-100 gap-3">
+              <button type="button" x-show="step>1" @click="prevStep" class="inline-flex items-center gap-2 px-4 py-2.5 text-sm font-medium text-slate-600 hover:text-slatebrand">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i>Wstecz
+              </button>
+              <span x-show="step===1"></span>
+              <button type="button" x-show="step<4" @click="nextStep" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-electric hover:bg-blue-700 rounded-xl ml-auto">
+                Dalej<i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+              <button type="submit" x-show="step===4" x-cloak :disabled="submitting" class="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-electric hover:bg-blue-700 rounded-xl ml-auto disabled:opacity-60">
+                <span x-show="!submitting">Wyslij bezplatna specyfikacje</span>
+                <span x-show="submitting" class="inline-flex items-center gap-2"><i data-lucide="loader-circle" class="w-4 h-4 animate-spin"></i>Wysylanie...</span>
+              </button>
+            </div>
+            <p x-show="submitError" class="text-sm text-red-600 mt-4 text-center" x-text="submitError"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="korzysci" class="bg-white py-16 sm:py-20 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slatebrand mb-2">Dlaczego Twoj biznes potrzebuje nowoczesnej strony?</h2>
+          <p class="text-lg text-slate-500 font-medium">(Zyski i Korzysci)</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <article class="border border-slate-200 rounded-2xl bg-surface p-8">
+            <i data-lucide="clock-3" class="w-8 h-8 text-electric mb-4"></i>
+            <h3 class="text-xl font-bold text-slatebrand mb-2">Klientow pozyskujesz 24/7</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Twoja strona pracuje bez przerwy, pozwalajac klientom zapoznac sie z oferta o kazdej porze.</p>
+          </article>
+          <article class="border border-slate-200 rounded-2xl bg-surface p-8">
+            <i data-lucide="badge-check" class="w-8 h-8 text-electric mb-4"></i>
+            <h3 class="text-xl font-bold text-slatebrand mb-2">Budujesz profesjonalny wizerunek</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Az 84% konsumentow uwaza firme posiadajaca strone za bardziej wiarygodna niz profil w social media.</p>
+          </article>
+          <article class="border border-slate-200 rounded-2xl bg-surface p-8">
+            <i data-lucide="phone-off" class="w-8 h-8 text-electric mb-4"></i>
+            <h3 class="text-xl font-bold text-slatebrand mb-2">Oszczedzasz czas na telefonach</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Dzieki cennikom i informacjom na stronie, klienci znajduja odpowiedzi sami, a Ty pracujesz w spokoju.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-surface py-16 sm:py-20 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slatebrand mb-2">Kompleksowe wsparcie dla biznesu</h2>
+          <p class="text-lg text-slate-500 font-medium">(Co robimy?)</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <article class="bg-white border border-slate-200 rounded-2xl p-8">
+            <h3 class="text-xl font-bold text-slatebrand mb-2">Strony WWW juz od 299 zl</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Szybkie, responsywne, zoptymalizowane pod telefony komorkowe. Projektowane od zera, bez gotowych, powtarzalnych szablonow.</p>
+          </article>
+          <article class="bg-white border border-slate-200 rounded-2xl p-8">
+            <h3 class="text-xl font-bold text-slatebrand mb-2">Wizytowki Google Maps</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Zakladamy i konfigurujemy profil Twojej firmy w mapach Google, aby lokalni klienci trafiali prosto do Ciebie.</p>
+          </article>
+          <article class="bg-white border border-slate-200 rounded-2xl p-8">
+            <h3 class="text-xl font-bold text-slatebrand mb-2">Pozycjonowanie SEO</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Optymalizujemy kod i tresci strony w taki sposob, aby Twoja firma wyswietlala sie jak najwyzej w wynikach wyszukiwania Google.</p>
+          </article>
+          <article class="bg-white border border-slate-200 rounded-2xl p-8">
+            <h3 class="text-xl font-bold text-slatebrand mb-2">Identyfikacja Wizualna</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">Projektujemy unikalne logo oraz materialy reklamowe do druku, w tym banery, ulotki czy wizytowki, ktore przyciagaja wzrok na ulicy.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-16 sm:py-20 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-slatebrand mb-2">Jak dzialamy?</h2>
+          <p class="text-lg text-slate-500 font-medium">(Ekspresowy proces)</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="rounded-2xl border border-slate-200 p-8">
+            <span class="inline-flex w-10 h-10 items-center justify-center rounded-full bg-slatebrand text-white font-bold mb-4">1</span>
+            <h3 class="text-lg font-bold text-slatebrand mb-2">Wypelniasz krotki brief online</h3>
+            <p class="text-sm text-slate-600">Zajmie Ci to tylko 2 minuty i pozwoli nam szybko przygotowac trafna koncepcje.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 p-8">
+            <span class="inline-flex w-10 h-10 items-center justify-center rounded-full bg-slatebrand text-white font-bold mb-4">2</span>
+            <h3 class="text-lg font-bold text-slatebrand mb-2">Szybko konsultujemy szczegoly</h3>
+            <p class="text-sm text-slate-600">Doprecyzowujemy strategię mailowo lub telefonicznie i potwierdzamy zakres wdrozenia.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 p-8">
+            <span class="inline-flex w-10 h-10 items-center justify-center rounded-full bg-electric text-white font-bold mb-4">3</span>
+            <h3 class="text-lg font-bold text-slatebrand mb-2">W 2 dni robocze gotowy projekt laduje w sieci</h3>
+            <p class="text-sm text-slate-600">Publikujemy strone, testujemy dzialanie i przekazujemy gotowe narzedzie do pozyskiwania klientow.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slatebrand text-slate-300 py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
+        <div>
+          <h4 class="text-white font-semibold mb-3">AXON Studio</h4>
+          <p class="text-sm text-slate-400">Nowoczesne strony internetowe, SEO i wsparcie marketingowe dla lokalnych biznesow.</p>
+        </div>
+        
+        <div>
+          <h5 class="text-white font-semibold mb-3 text-sm uppercase tracking-wide">Kontakt</h5>
+          <ul class="space-y-1.5 text-sm">
+            <li><a href="tel:+48669223132" class="hover:text-white transition-colors">669 223 132</a></li>
+            <li><a href="mailto:kontakt@axonstudio.pl" class="hover:text-white transition-colors">axonstudio.kontakt@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-700 pt-6">
+        <p class="text-xs text-slate-400">Uslugi swiadczone w ramach dzialalnosci nierejestrowanej na podstawie art. 5 ustawy Prawo przedsiebiorcow. Regulamin i polityka prywatnosci dostepne na zadanie e-mail.</p>
+        <p class="text-xs text-slate-500 mt-2">&copy; 2026 AXON Studio. Wszelkie prawa zastrzezone.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div x-show="showModal" x-cloak class="fixed inset-0 z-[100] flex items-center justify-center p-4" @keydown.escape.window="showModal=false">
+    <div class="absolute inset-0 bg-slatebrand/60 backdrop-blur-sm" @click="showModal=false"></div>
+    <div class="relative bg-white rounded-2xl shadow-soft max-w-lg w-full p-8" x-show="showModal" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-95 translate-y-3" x-transition:enter-end="opacity-100 scale-100 translate-y-0">
+      <button @click="showModal=false" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slatebrand" aria-label="Zamknij">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div class="text-center">
+        <span class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-100 text-green-600 mb-5">
+          <i data-lucide="check-circle" class="w-8 h-8"></i>
+        </span>
+        <h3 class="text-2xl font-bold text-slatebrand mb-3">Dziekujemy!</h3>
+        <p class="text-slate-600 leading-relaxed">Twoje zgloszenie dotarlo do AXON Studio. Przeanalizujemy konfiguracje i skontaktujemy sie w ciagu kilku godzin, aby przedstawic darmowy plan dzialania.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script>
+    function axonWizard() {
+      return {
+        step: 1,
+        showModal: false,
+        submitting: false,
+        submitError: "",
+        steps: ["Profil Twojej Firmy", "Wizja, Styl i Estetyka", "Wybor Uslug i Dodatkow", "Dane Kontaktowe"],
+        form: {
+          nazwaFirmy: "",
+          branza: "",
+          obecnaStrona: "",
+          cel: "",
+          styl: "",
+          kolor: "",
+          dodatki: [],
+          telefon: "",
+          email: "",
+          imie: "",
+          preferowanyKontakt: "",
+          uwagi: ""
+        },
+        errors: {},
+        styles: [
+          { id: "modern", name: "Nowoczesny / Dark Mode", desc: "Mroczny, dynamiczny, wyrazisty", icon: "moon" },
+          { id: "classic", name: "Elegancki / Klasyczny", desc: "Stonowany, biznesowy, premium", icon: "gem" },
+          { id: "minimal", name: "Minimalistyczny / Jasny", desc: "Czysty, przejrzysty, lekki", icon: "sun" }
+        ],
+        colors: [
+          { id: "blue", name: "Niebieski", hex: "#2563eb" },
+          { id: "red", name: "Czerwony", hex: "#dc2626" },
+          { id: "gold", name: "Zloty", hex: "#ca8a04" },
+          { id: "green", name: "Zielony", hex: "#16a34a" },
+          { id: "black", name: "Czarny", hex: "#111827" }
+        ],
+        addons: [
+          { id: "www", label: "Projekt nowoczesnej strony internetowej (Wersja bazowa - od 299 zl)" },
+          { id: "maps", label: "Stworzenie i optymalizacja wizytowki Google Maps" },
+          { id: "seo", label: "Podstawowe pozycjonowanie (SEO) strony pod wyszukiwarke Google" },
+          { id: "logo", label: "Projekt profesjonalnego Logo dla firmy" },
+          { id: "baner", label: "Projekt wielkoformatowego Baneru Reklamowego (gotowy do druku)" },
+          { id: "copy", label: "Napisanie tekstow sprzedazowych na strone przez copywritera" },
+          { id: "galeria", label: "Interaktywna galeria realizowanych projektow / zdjec" }
+        ],
+        toggleAddon(label) {
+          const idx = this.form.dodatki.indexOf(label);
+          if (idx === -1) this.form.dodatki.push(label);
+          else this.form.dodatki.splice(idx, 1);
+        },
+        validateStep(n) {
+          this.errors = {};
+          if (n === 1) {
+            if (!this.form.nazwaFirmy.trim()) this.errors.nazwaFirmy = "Podaj nazwe firmy";
+            if (!this.form.branza.trim()) this.errors.branza = "Podaj branze";
+            if (!this.form.cel) this.errors.cel = "Wybierz glowny cel";
+          }
+          if (n === 2) {
+            if (!this.form.styl) this.errors.styl = "Wybierz styl";
+            if (!this.form.kolor) this.errors.kolor = "Wybierz kolor akcentu";
+          }
+          if (n === 4) {
+            if (!this.form.telefon.trim()) this.errors.telefon = "Podaj numer telefonu";
+            if (!this.form.email.trim()) this.errors.email = "Podaj e-mail";
+            else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.form.email)) this.errors.email = "Nieprawidlowy e-mail";
+            if (!this.form.imie.trim()) this.errors.imie = "Podaj imie";
+            if (!this.form.preferowanyKontakt) this.errors.preferowanyKontakt = "Wybierz preferowany kontakt";
+          }
+          return Object.keys(this.errors).length === 0;
+        },
+        nextStep() {
+          if (!this.validateStep(this.step)) return;
+          if (this.step < 4) this.step++;
+          this.$nextTick(() => lucide.createIcons());
+        },
+        prevStep() {
+          if (this.step > 1) this.step--;
+          this.$nextTick(() => lucide.createIcons());
+        },
+        resetFormState() {
+          this.step = 1;
+          this.form = {
+            nazwaFirmy: "",
+            branza: "",
+            obecnaStrona: "",
+            cel: "",
+            styl: "",
+            kolor: "",
+            dodatki: [],
+            telefon: "",
+            email: "",
+            imie: "",
+            preferowanyKontakt: "",
+            uwagi: ""
+          };
+          this.errors = {};
+        },
+        async submitForm() {
+          if (!this.validateStep(4)) return;
+          const form = this.$refs.form;
+          const endpoint = form.getAttribute("action");
+          this.submitting = true;
+          this.submitError = "";
+          try {
+            const res = await fetch(endpoint, {
+              method: "POST",
+              body: new FormData(form),
+              headers: { Accept: "application/json" }
+            });
+            const data = await res.json().catch(() => ({}));
+            if (res.ok && (data.ok === true || data.next)) {
+              this.showModal = true;
+              form.reset();
+              this.resetFormState();
+            } else {
+              this.submitError = data.error || "Nie udalo sie wyslac formularza. Sprobuj ponownie lub zadzwon: 669 223 132.";
+            }
+          } catch (e) {
+            this.submitError = "Blad polaczenia. Sprawdz internet lub skontaktuj sie telefonicznie.";
+          } finally {
+            this.submitting = false;
+            this.$nextTick(() => lucide.createIcons());
+          }
+        },
+        init() {
+          this.$nextTick(() => lucide.createIcons());
+          this.$watch("step", () => this.$nextTick(() => lucide.createIcons()));
+          this.$watch("showModal", (v) => { document.body.style.overflow = v ? "hidden" : ""; });
+        }
+      };
+    }
+    document.addEventListener("DOMContentLoaded", () => lucide.createIcons());
+  </script>
+</body>
+</html>
